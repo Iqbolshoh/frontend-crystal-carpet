@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="uz" data-theme="light">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GilAM - Premium Gilam Ishlab Chiqarish Zavodi</title>
+    <title>GilAM - Premium Carpet Manufacturing Factory</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
     <!-- Loading Screen -->
     <div class="loader-wrapper">
         <div class="loader">
-            <svg viewBox="0 0 80 80">
-                <circle cx="40" cy="40" r="32"></circle>
-            </svg>
+            <div class="loader-circle"></div>
+            <div class="loader-text">GilAM</div>
         </div>
     </div>
 
@@ -22,21 +21,19 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <svg width="40" height="40" viewBox="0 0 40 40">
-                    <rect width="40" height="40" rx="8" fill="var(--primary)"/>
-                    <text x="20" y="28" text-anchor="middle" fill="white" font-size="24" font-weight="bold">G</text>
-                </svg>
+                <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=50&h=50&fit=crop" alt="GilAM Logo" class="logo-img">
                 <span>GilAM</span>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Bosh sahifa</a></li>
-                <li><a href="#products">Mahsulotlar</a></li>
-                <li><a href="#about">Biz haqimizda</a></li>
-                <li><a href="#process">Jarayon</a></li>
-                <li><a href="#contact">Aloqa</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                <button id="themeToggle" class="theme-toggle" aria-label="Dark mode">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
                     <i class="bi bi-moon-stars-fill"></i>
                 </button>
                 <div class="hamburger" id="hamburger">
@@ -50,107 +47,138 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-particles"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="bi bi-award-fill"></i>
-                <span>14 yillik tajriba</span>
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=1920&q=80')">
+                <div class="hero-overlay"></div>
             </div>
-            <h1>Premium Gilamlar <span class="highlight">Ishlab Chiqarish</span></h1>
-            <p class="hero-description">An'anaviy hunarmandchilik va zamonaviy texnologiyalar uyg'unligida yaratilgan yuqori sifatli gilamlar</p>
-            <div class="hero-buttons">
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1920&q=80')">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80')">
+                <div class="hero-overlay"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <i class="bi bi-award-fill"></i>
+                <span>14 Years of Excellence</span>
+            </div>
+            <h1 class="animate-slide-up">Crafting <span class="highlight">Premium Carpets</span> Since 2010</h1>
+            <p class="hero-description animate-slide-up">Where traditional craftsmanship meets modern innovation to create exceptional floor coverings that transform spaces</p>
+            <div class="hero-buttons animate-slide-up">
                 <a href="#products" class="btn btn-primary">
                     <i class="bi bi-grid-fill"></i>
-                    Mahsulotlarimiz
+                    Explore Collection
                 </a>
                 <a href="#contact" class="btn btn-outline">
                     <i class="bi bi-telephone-fill"></i>
-                    Bog'lanish
+                    Get in Touch
                 </a>
             </div>
-            <div class="hero-stats">
+            <div class="hero-stats animate-fade-in">
                 <div class="hero-stat">
                     <span class="hero-stat-number">500+</span>
-                    <span class="hero-stat-label">Ishchilar</span>
+                    <span class="hero-stat-label">Skilled Artisans</span>
                 </div>
                 <div class="hero-stat">
                     <span class="hero-stat-number">50+</span>
-                    <span class="hero-stat-label">Eksport davlatlari</span>
+                    <span class="hero-stat-label">Export Countries</span>
                 </div>
                 <div class="hero-stat">
-                    <span class="hero-stat-number">10,000+</span>
-                    <span class="hero-stat-label">Mamnun mijozlar</span>
+                    <span class="hero-stat-number">10K+</span>
+                    <span class="hero-stat-label">Happy Clients</span>
                 </div>
             </div>
         </div>
+        
         <div class="scroll-indicator">
-            <span>Pastga suring</span>
+            <span>Scroll to explore</span>
             <i class="bi bi-chevron-down"></i>
+        </div>
+        
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
         </div>
     </section>
 
     <!-- Products Section -->
     <section id="products" class="section products">
-        <div class="section-header">
-            <span class="section-subtitle">Mahsulotlarimiz</span>
-            <h2 class="section-title">Premium Gilam Kolleksiyasi</h2>
-            <p class="section-description">Har bir gilam o'ziga xos san'at asari bo'lib, eng yuqori sifat standartlariga javob beradi</p>
+        <div class="section-header reveal">
+            <span class="section-subtitle">Our Collection</span>
+            <h2 class="section-title">Premium Carpet Selection</h2>
+            <p class="section-description">Discover our extensive range of handcrafted and machine-made carpets, each piece a testament to quality and artistry</p>
         </div>
+        
         <div class="products-grid">
-            <div class="product-card">
+            <div class="product-card reveal">
                 <div class="product-image">
-                    <i class="bi bi-brush-fill"></i>
+                    <img src="https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?w=600&h=400&fit=crop" alt="Handwoven Carpet">
                     <div class="product-overlay">
                         <span class="product-badge">Premium</span>
+                        <button class="btn-view">View Details</button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Qo'lda To'qilgan Gilam</h3>
-                    <p>An'anaviy usulda to'qilgan, yuqori sifatli ipak va jun aralashmasi</p>
+                    <h3>Handwoven Masterpiece</h3>
+                    <p>Exquisite handwoven carpets crafted by master artisans using traditional techniques passed down through generations</p>
                     <div class="product-specs">
-                        <span class="spec"><i class="bi bi-hand-index-thumb"></i> 100% qo'l mehnati</span>
-                        <span class="spec"><i class="bi bi-droplet-fill"></i> Ipak/Jun</span>
-                        <span class="spec"><i class="bi bi-arrows-fullscreen"></i> 2x3 m</span>
+                        <span class="spec"><i class="bi bi-hand-index-thumb"></i> 100% Handmade</span>
+                        <span class="spec"><i class="bi bi-droplet-fill"></i> Silk & Wool</span>
+                        <span class="spec"><i class="bi bi-arrows-fullscreen"></i> Custom Sizes</span>
                     </div>
-                    <button class="btn-product">Batafsil</button>
+                    <div class="product-footer">
+                        <span class="product-price">From $2,500</span>
+                        <button class="btn-product">Learn More</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card reveal">
                 <div class="product-image">
-                    <i class="bi bi-gear-wide-connected"></i>
+                    <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=600&h=400&fit=crop" alt="Machine Made Carpet">
                     <div class="product-overlay">
                         <span class="product-badge">Bestseller</span>
+                        <button class="btn-view">View Details</button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Mashina Gilami</h3>
-                    <p>Zamonaviy texnologiyalar yordamida ishlab chiqarilgan bardoshli gilamlar</p>
+                    <h3>Modern Machine Made</h3>
+                    <p>High-precision machine-made carpets combining durability with contemporary designs for modern living spaces</p>
                     <div class="product-specs">
-                        <span class="spec"><i class="bi bi-shield-check"></i> Polipropilen</span>
-                        <span class="spec"><i class="bi bi-arrows-fullscreen"></i> 3x4 m</span>
-                        <span class="spec"><i class="bi bi-palette-fill"></i> 30+ rang</span>
+                        <span class="spec"><i class="bi bi-shield-check"></i> Polypropylene</span>
+                        <span class="spec"><i class="bi bi-arrows-fullscreen"></i> Multiple Sizes</span>
+                        <span class="spec"><i class="bi bi-palette-fill"></i> 30+ Colors</span>
                     </div>
-                    <button class="btn-product">Batafsil</button>
+                    <div class="product-footer">
+                        <span class="product-price">From $800</span>
+                        <button class="btn-product">Learn More</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card reveal">
                 <div class="product-image">
-                    <i class="bi bi-building-fill"></i>
+                    <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&h=400&fit=crop" alt="Commercial Carpet">
                     <div class="product-overlay">
-                        <span class="product-badge">Biznes</span>
+                        <span class="product-badge">Business</span>
+                        <button class="btn-view">View Details</button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Ofis Gilamlari</h3>
-                    <p>Maxsus mustahkamlikka ega, ofislar va jamoat joylari uchun mo'ljallangan</p>
+                    <h3>Commercial Solutions</h3>
+                    <p>Heavy-duty carpets designed for high-traffic commercial spaces, offices, and hospitality environments</p>
                     <div class="product-specs">
-                        <span class="spec"><i class="bi bi-shield-fill-check"></i> Yuqori chidamlilik</span>
-                        <span class="spec"><i class="bi bi-arrows-fullscreen"></i> 4x5 m</span>
-                        <span class="spec"><i class="bi bi-heart-pulse-fill"></i> Antiallergik</span>
+                        <span class="spec"><i class="bi bi-shield-fill-check"></i> Extra Durable</span>
+                        <span class="spec"><i class="bi bi-arrows-fullscreen"></i> Custom Orders</span>
+                        <span class="spec"><i class="bi bi-heart-pulse-fill"></i> Hypoallergenic</span>
                     </div>
-                    <button class="btn-product">Batafsil</button>
+                    <div class="product-footer">
+                        <span class="product-price">From $1,200</span>
+                        <button class="btn-product">Learn More</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -159,35 +187,98 @@
     <!-- About Section -->
     <section id="about" class="section about">
         <div class="about-content">
-            <div class="about-visual">
+            <div class="about-visual reveal">
                 <div class="about-image-wrapper">
                     <div class="about-image">
-                        <i class="bi bi-building-fill-gear"></i>
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=600&fit=crop" alt="Factory Interior">
                     </div>
                     <div class="about-experience">
                         <span class="experience-number" data-target="14">0</span>
-                        <span class="experience-text">Yillik tajriba</span>
+                        <span class="experience-text">Years of<br>Excellence</span>
                     </div>
                 </div>
             </div>
-            <div class="about-text">
-                <span class="section-subtitle">Biz haqimizda</span>
-                <h2 class="section-title">Gilam Ishlab Chiqarish San'ati</h2>
-                <p>GilAM zavodi 2010 yilda tashkil etilgan bo'lib, bugungi kunda O'zbekistonning eng yirik gilam ishlab chiqaruvchilaridan biri hisoblanadi. Bizning mahsulotlarimiz nafaqat mamlakatimizda, balki xorijiy davlatlarda ham katta talabga ega.</p>
-                <p>Zamonaviy texnologiyalar va an'anaviy hunarmandchilik uyg'unligi bizga yuqori sifatli, bardoshli va chiroyli gilamlar yaratish imkonini beradi.</p>
+            <div class="about-text reveal">
+                <span class="section-subtitle">About Us</span>
+                <h2 class="section-title">The Art of Carpet Manufacturing</h2>
+                <p>Founded in 2010, GilAM has grown to become one of Uzbekistan's premier carpet manufacturers. Our commitment to quality, innovation, and customer satisfaction has earned us recognition in over 50 countries worldwide.</p>
+                <p>We blend centuries-old traditional techniques with state-of-the-art technology to create carpets that are not just floor coverings, but works of art that enhance any space.</p>
                 <div class="about-features">
                     <div class="feature">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>ISO 9001 sertifikati</span>
+                        <div>
+                            <h4>ISO 9001 Certified</h4>
+                            <p>International quality management standards</p>
+                        </div>
                     </div>
                     <div class="feature">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Ekologik toza materiallar</span>
+                        <div>
+                            <h4>Eco-Friendly Materials</h4>
+                            <p>Sustainable and environmentally conscious production</p>
+                        </div>
                     </div>
                     <div class="feature">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>14 yillik kafolat</span>
+                        <div>
+                            <h4>14-Year Warranty</h4>
+                            <p>Confidence in every product we create</p>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="section-header reveal">
+            <span class="section-subtitle">Portfolio</span>
+            <h2 class="section-title">Our Work Gallery</h2>
+            <p class="section-description">Explore our recent projects and installations across residential, commercial, and hospitality spaces</p>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?w=600&h=400&fit=crop" alt="Luxury Living Room">
+                <div class="gallery-overlay">
+                    <h4>Luxury Residence</h4>
+                    <p>Custom handwoven carpet</p>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=400&fit=crop" alt="Hotel Lobby">
+                <div class="gallery-overlay">
+                    <h4>Grand Hotel Lobby</h4>
+                    <p>Commercial grade installation</p>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=600&h=400&fit=crop" alt="Modern Office">
+                <div class="gallery-overlay">
+                    <h4>Corporate Office</h4>
+                    <p>Modern workspace design</p>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1604574116760-ebbac052e5df?w=600&h=400&fit=crop" alt="Restaurant">
+                <div class="gallery-overlay">
+                    <h4>Fine Dining Restaurant</h4>
+                    <p>Elegant interior solution</p>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop" alt="Conference Room">
+                <div class="gallery-overlay">
+                    <h4>Conference Center</h4>
+                    <p>Professional installation</p>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&h=400&fit=crop" alt="Residential">
+                <div class="gallery-overlay">
+                    <h4>Private Villa</h4>
+                    <p>Bespoke carpet design</p>
                 </div>
             </div>
         </div>
@@ -195,52 +286,53 @@
 
     <!-- Process Section -->
     <section id="process" class="section process">
-        <div class="section-header">
-            <span class="section-subtitle">Ishlab chiqarish</span>
-            <h2 class="section-title">Jarayon Bosqichlari</h2>
-            <p class="section-description">Sifatli gilam yaratishning to'rtta muhim bosqichi</p>
+        <div class="section-header reveal">
+            <span class="section-subtitle">Manufacturing</span>
+            <h2 class="section-title">Our Process</h2>
+            <p class="section-description">Every carpet goes through rigorous quality control and meticulous craftsmanship</p>
         </div>
+        
         <div class="process-timeline">
             <div class="process-line"></div>
             <div class="process-steps">
-                <div class="step">
+                <div class="step reveal">
                     <div class="step-number">01</div>
                     <div class="step-icon">
                         <i class="bi bi-box-seam-fill"></i>
                     </div>
                     <div class="step-content">
-                        <h3>Xomashyo Tanlash</h3>
-                        <p>Eng sifatli jun, ipak va sintetik materiallarni sinchkovlik bilan saralab olish</p>
+                        <h3>Material Selection</h3>
+                        <p>We carefully source the finest wool, silk, and synthetic fibers from trusted suppliers worldwide</p>
                     </div>
                 </div>
-                <div class="step">
+                <div class="step reveal">
                     <div class="step-number">02</div>
                     <div class="step-icon">
                         <i class="bi bi-droplet-fill"></i>
                     </div>
                     <div class="step-content">
-                        <h3>Bo'yash Jarayoni</h3>
-                        <p>Ekologik toza va bardoshli bo'yoqlar bilan professional rang berish</p>
+                        <h3>Dyeing Process</h3>
+                        <p>Our eco-friendly dyeing techniques ensure vibrant, long-lasting colors that never fade</p>
                     </div>
                 </div>
-                <div class="step">
+                <div class="step reveal">
                     <div class="step-number">03</div>
                     <div class="step-icon">
                         <i class="bi bi-grid-3x3-gap-fill"></i>
                     </div>
                     <div class="step-content">
-                        <h3>To'qish</h3>
-                        <p>An'anaviy qo'l mehnati va zamonaviy dastgohlar uyg'unligida to'qish</p>
+                        <h3>Weaving</h3>
+                        <p>Combining traditional handloom techniques with modern machinery for perfect results</p>
                     </div>
                 </div>
-                <div class="step">
+                <div class="step reveal">
                     <div class="step-number">04</div>
                     <div class="step-icon">
                         <i class="bi bi-clipboard-check-fill"></i>
                     </div>
                     <div class="step-content">
-                        <h3>Sifat Nazorati</h3>
-                        <p>Har bir tayyor mahsulotni qat'iy standartlar asosida tekshirish</p>
+                        <h3>Quality Control</h3>
+                        <p>Rigorous testing and inspection ensure every carpet meets our premium standards</p>
                     </div>
                 </div>
             </div>
@@ -250,10 +342,10 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact">
         <div class="contact-wrapper">
-            <div class="contact-info">
-                <span class="section-subtitle">Aloqa</span>
-                <h2 class="section-title">Biz Bilan Bog'laning</h2>
-                <p class="contact-description">Savol va takliflaringiz uchun biz bilan bog'laning. Biz sizga yordam berishdan mamnunmiz.</p>
+            <div class="contact-info reveal">
+                <span class="section-subtitle">Contact Us</span>
+                <h2 class="section-title">Let's Discuss Your Project</h2>
+                <p class="contact-description">Ready to transform your space with premium carpets? Get in touch with our team for personalized solutions.</p>
                 
                 <div class="contact-details">
                     <div class="contact-card">
@@ -261,8 +353,8 @@
                             <i class="bi bi-geo-alt-fill"></i>
                         </div>
                         <div>
-                            <h4>Manzil</h4>
-                            <p>Toshkent sh., Olmazor tumani, Gilamchilar ko'chasi, 15</p>
+                            <h4>Visit Our Factory</h4>
+                            <p>15 Carpet Makers Street, Olmazor District, Tashkent, Uzbekistan</p>
                         </div>
                     </div>
                     
@@ -271,7 +363,7 @@
                             <i class="bi bi-telephone-fill"></i>
                         </div>
                         <div>
-                            <h4>Telefon</h4>
+                            <h4>Call Us</h4>
                             <p>+998 71 123-45-67</p>
                             <p>+998 90 987-65-43</p>
                         </div>
@@ -282,49 +374,38 @@
                             <i class="bi bi-envelope-fill"></i>
                         </div>
                         <div>
-                            <h4>Email</h4>
+                            <h4>Email Us</h4>
                             <p>info@gilam.uz</p>
                             <p>sales@gilam.uz</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="bi bi-clock-fill"></i>
-                        </div>
-                        <div>
-                            <h4>Ish Vaqti</h4>
-                            <p>Dushanba - Shanba: 9:00 - 18:00</p>
-                            <p>Yakshanba: Dam olish kuni</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form reveal" id="contactForm">
                 <div class="form-header">
-                    <h3>Xabar Yuborish</h3>
-                    <p>Biz siz bilan tez orada bog'lanamiz</p>
+                    <h3>Send a Message</h3>
+                    <p>We'll get back to you within 24 hours</p>
                 </div>
                 <div class="form-group">
-                    <label for="name">Ismingiz</label>
-                    <input type="text" id="name" placeholder="Ismingizni kiriting" required>
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Email manzilingiz" required>
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Telefon</label>
+                    <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" placeholder="+998 __ ___ __ __">
                 </div>
                 <div class="form-group">
-                    <label for="message">Xabar</label>
-                    <textarea id="message" placeholder="Xabaringizni yozing..." rows="4"></textarea>
+                    <label for="message">Your Message *</label>
+                    <textarea id="message" placeholder="Tell us about your project..." rows="4" required></textarea>
                 </div>
                 <button type="submit" class="btn-submit">
                     <i class="bi bi-send-fill"></i>
-                    Yuborish
+                    Send Message
                 </button>
             </form>
         </div>
@@ -335,50 +416,50 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="#" class="footer-logo">
-                    <svg width="40" height="40" viewBox="0 0 40 40">
-                        <rect width="40" height="40" rx="8" fill="var(--primary)"/>
-                        <text x="20" y="28" text-anchor="middle" fill="white" font-size="24" font-weight="bold">G</text>
-                    </svg>
+                    <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=50&h=50&fit=crop" alt="GilAM Logo">
                     <span>GilAM</span>
                 </a>
-                <p>2010 yildan beri sifatli gilamlar ishlab chiqaramiz. Bizning mahsulotlarimiz dunyoning 50 dan ortiq davlatlariga eksport qilinadi.</p>
+                <p>Premium carpet manufacturing since 2010. Our products are exported to over 50 countries, bringing comfort and elegance to spaces worldwide.</p>
                 <div class="social-links">
                     <a href="#"><i class="bi bi-facebook"></i></a>
                     <a href="#"><i class="bi bi-instagram"></i></a>
                     <a href="#"><i class="bi bi-telegram"></i></a>
                     <a href="#"><i class="bi bi-youtube"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
             <div class="footer-links">
-                <h4>Tezkor Havolalar</h4>
+                <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#home">Bosh sahifa</a></li>
-                    <li><a href="#products">Mahsulotlar</a></li>
-                    <li><a href="#about">Biz haqimizda</a></li>
-                    <li><a href="#process">Jarayon</a></li>
-                    <li><a href="#contact">Aloqa</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-links">
-                <h4>Mahsulotlar</h4>
+                <h4>Products</h4>
                 <ul>
-                    <li><a href="#">Qo'lda to'qilgan</a></li>
-                    <li><a href="#">Mashina gilami</a></li>
-                    <li><a href="#">Ofis gilamlari</a></li>
-                    <li><a href="#">Maxsus buyurtma</a></li>
+                    <li><a href="#">Handwoven Carpets</a></li>
+                    <li><a href="#">Machine Made Carpets</a></li>
+                    <li><a href="#">Commercial Solutions</a></li>
+                    <li><a href="#">Custom Orders</a></li>
+                    <li><a href="#">Carpet Care Products</a></li>
                 </ul>
             </div>
             <div class="footer-newsletter">
-                <h4>Yangiliklarga Obuna Bo'ling</h4>
-                <p>Eng so'nggi yangiliklar va maxsus takliflar haqida birinchilardan bo'lib xabardor bo'ling.</p>
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive updates on new collections, special offers, and design inspiration.</p>
                 <form class="newsletter-form">
-                    <input type="email" placeholder="Email manzilingiz">
+                    <input type="email" placeholder="Your email address">
                     <button type="submit"><i class="bi bi-send-fill"></i></button>
                 </form>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 GilAM Zavodi. Barcha huquqlar himoyalangan.</p>
+            <p>&copy; 2024 GilAM Factory. All rights reserved. | Premium Carpet Manufacturing</p>
         </div>
     </footer>
 
@@ -387,6 +468,6 @@
         <i class="bi bi-arrow-up-short"></i>
     </button>
 
-    <script src="script.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
